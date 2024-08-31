@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Counter } from "./components/Counter";
 
 import "./App.css";
+import { Message } from "./components/Message";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,8 +18,9 @@ function App() {
   }
   return (
     <>
+      <Message count={count} />
       <Counter count={count} handleInc={handleInc} handleDec={handleDec} />
-      {count === 15 && <Message />}
+     
     </>
   );
 }
